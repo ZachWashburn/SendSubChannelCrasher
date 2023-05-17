@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MinHook">
+      <UniqueIdentifier>{26e9ce35-a8c7-4f4b-8736-4f069467d0f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MinHook\hde">
+      <UniqueIdentifier>{d8cf5ca9-8364-41be-8d3f-0356993f38f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK">
+      <UniqueIdentifier>{584cb044-1024-4311-ae6e-54c0569a5154}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\public">
+      <UniqueIdentifier>{18434a7e-51cd-4230-bc05-bc1bb576a67a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\public\steam">
+      <UniqueIdentifier>{8013ea29-2d97-494a-b330-96f4afaae7de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MemoryTools">
+      <UniqueIdentifier>{775402f4-e0d7-41a1-a8aa-6bba57995d88}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook\buffer.h">
+      <Filter>MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook\MinHook.h">
+      <Filter>MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook\trampoline.h">
+      <Filter>MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook\hde\hde32.h">
+      <Filter>MinHook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook\hde\hde64.h">
+      <Filter>MinHook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook\hde\pstdint.h">
+      <Filter>MinHook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook\hde\table32.h">
+      <Filter>MinHook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook\hde\table64.h">
+      <Filter>MinHook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="checksum_crc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bitbuf.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamapplist.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamapps.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamappticket.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamclient.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamcontroller.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamfriends.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamgamecoordinator.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamgameserver.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamgameserverstats.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamhtmlsurface.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamhttp.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteaminput.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteaminventory.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteammatchmaking.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteammusic.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteammusicremote.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamnetworking.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamnetworkingmessages.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamnetworkingsockets.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamnetworkingutils.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamparentalsettings.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamps3overlayrenderer.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamremoteplay.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamremotestorage.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamscreenshots.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamugc.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamuser.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamuserstats.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamutils.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\isteamvideo.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\matchmakingtypes.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\steam_api.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\steam_api_common.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\steam_api_flat.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\steam_api_internal.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\steam_gameserver.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\steamclientpublic.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\steamencryptedappticket.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\steamhttpenums.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\steamnetworkingfakeip.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\steamnetworkingtypes.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\steamps3params.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\steamtypes.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="sdk\public\steam\steamuniverse.h">
+      <Filter>SDK\public\steam</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryTools\MemoryTools.h">
+      <Filter>MemoryTools</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MinHook\buffer.c">
+      <Filter>MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="MinHook\hook.c">
+      <Filter>MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="MinHook\trampoline.c">
+      <Filter>MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="MinHook\hde\hde32.c">
+      <Filter>MinHook\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="MinHook\hde\hde64.c">
+      <Filter>MinHook\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="checksum_crc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bitbuf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sdk\public\steam\steam_api.json">
+      <Filter>SDK\public\steam</Filter>
+    </None>
+  </ItemGroup>
+</Project>
