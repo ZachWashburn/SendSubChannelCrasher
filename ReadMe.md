@@ -19,6 +19,7 @@ As the transmitter sends messages, the **numFragments** value is decremented and
 When a buffer is allocated normally for the first packet, and a subsequent packet states that the number of fragments is 0, while setting **startFragment** to one above the maximum alloted fragments, the buffer will be overwritten causing memory corruption on the heap. 
 
 Within the function `ReadSubChannelData`, the following line is used to calculate whether a incoming buffer overflow is possible:
+
         - `if ((startFragment + numFragments) > data->numFragments)`
         
 In the condition that a client initially stated a total number of fragments evaluating to 1, the data buffer will be allocated as `buffer = malloc(numFragments /* r calculated */ * 256 /* max fragment size*/ );`. For visualization, this can be seen as `char buffer[256]`.
