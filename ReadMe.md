@@ -21,12 +21,16 @@ When a buffer is allocated normally for the first packet, and a subsequent packe
 
 Within the function [`ReadSubChannelData`](https://github.com/perilouswithadollarsign/cstrike15_src/blob/f82112a2388b841d72cb62ca48ab1846dfcc11c8/engine/net_chan.cpp#L1699), the following line is used to calculate whether a incoming buffer overflow is possible:
 
-        if ((startFragment + numFragments) > data->numFragments)
-        
+```C
+if ((startFragment + numFragments) > data->numFragments)
+```        
+
 In the condition that a client initially stated a total number of fragments evaluating to 1, the data buffer will be allocated as:
 
-        buffer = malloc(numFragments /* r calculated */ * 256 /* max fragment size*/ );`
-        
+```C
+buffer = malloc(numFragments /* r calculated */ * 256 /* max fragment size*/ );`
+```
+
 For visualization, this can be seen as `char buffer[256]`.
 
 A subsequent packet with a **numFragments** of 0 and a **startFragment** of 1 will pass the overflow sanity check, as `(1 + 0 > 0) == true`. 
@@ -39,8 +43,10 @@ To calculate the length of data to write, the calculation : `numFragments - (256
 
 Upon reaching the statement to read data bytes to the buffer, the function invokation will evaluate to:
 
-        buf.ReadBytes(&buffer[sizeof(buffer)], 4294967039)
-        
+```C++
+buf.ReadBytes(&buffer[sizeof(buffer)], 4294967039)
+```
+
 both overruning the reliable message buffer for writing, and overruning the fragment buffer for reading. This will cause heap corruption and the program will crash. 
 
 Packet Breakdown:
