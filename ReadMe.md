@@ -7,7 +7,7 @@
 ***Valve has not responded to the open bug report, as of 5/17/2023 the bug is still present in the most up to date version of the source engine.***
 
 ## Technical Background 
-The source engine builds a reliable message system on top of the standard UDP/steam-datagram networking sockets. "datafragements" are transmitted from the client to the server comprising a single reliable message, where the receiver proceeds to keep track of current messages, and ACK successfully reception. Non-ACK'd messages are retransmitted by the client. 
+The source engine builds a reliable message system on top of the standard UDP/steam-datagram networking sockets. "datafragements" are transmitted from the client to the server comprising a single reliable message, where the receiver proceeds to keep track of current messages, and ACK successful reception. Non-ACK'd messages are retransmitted by the client. 
 
 When a server initially recieves a datafragment transmission, it will allocate a buffer for this fragment. When transmitting a data fragment, The transmitter will select a **startFragment** value, which indicates an offset in which the data being transmitted begins. Inital transmission of data will always have a **startFragment** of 0. Additionally, the client will transmit a **numFragments** value, which indicates the total number of fragments left within the current reliable message. The receiver will calculate its own **numFragments (r)** value based on the number of total bytes within the message as stated in the initial header, which describes the total number of fragments in the message.
 
