@@ -36,7 +36,11 @@ To calculate the length of data to write, the calculation : `numFragments - (256
 
 ![Over write](media/overun.png)
 
-Upon reaching the statement to read data bytes to the buffer, the function invokation will evaluate to `buf.ReadBytes(&buffer[sizeof(buffer)], 4294967039)`, both overruning the reliable message buffer for writing, and overruning the fragment buffer for reading. This causing heap corruption and will cause the program to crash. 
+Upon reaching the statement to read data bytes to the buffer, the function invokation will evaluate to:
+
+        buf.ReadBytes(&buffer[sizeof(buffer)], 4294967039)
+        
+both overruning the reliable message buffer for writing, and overruning the fragment buffer for reading. This causing heap corruption and will cause the program to crash. 
 
 Packet Breakdown:
 
