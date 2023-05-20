@@ -20,9 +20,13 @@ When a buffer is allocated normally for the first packet, and a subsequent packe
 
 Within the function `ReadSubChannelData`, the following line is used to calculate whether a incoming buffer overflow is possible:
 
-        - `if ((startFragment + numFragments) > data->numFragments)`
+        if ((startFragment + numFragments) > data->numFragments)
         
-In the condition that a client initially stated a total number of fragments evaluating to 1, the data buffer will be allocated as `buffer = malloc(numFragments /* r calculated */ * 256 /* max fragment size*/ );`. For visualization, this can be seen as `char buffer[256]`.
+In the condition that a client initially stated a total number of fragments evaluating to 1, the data buffer will be allocated as:
+
+        buffer = malloc(numFragments /* r calculated */ * 256 /* max fragment size*/ );`
+        
+For visualization, this can be seen as `char buffer[256]`.
 
 A subsequent packet with a **numFragments** of 0 and a **startFragment** of 1 will pass the overflow sanity check, as `(1 + 0 > 0) == true`. 
 
