@@ -19,7 +19,7 @@ As the transmitter sends messages, the **numFragments** value is decremented and
 
 When a buffer is allocated normally for the first packet, and a subsequent packet states that the number of fragments is 0, while setting **startFragment** to one above the maximum alloted fragments, the buffer will be overwritten causing memory corruption on the heap. 
 
-Within the function `ReadSubChannelData`, the following line is used to calculate whether a incoming buffer overflow is possible:
+Within the function [`ReadSubChannelData`](https://github.com/perilouswithadollarsign/cstrike15_src/blob/f82112a2388b841d72cb62ca48ab1846dfcc11c8/engine/net_chan.cpp#L1699), the following line is used to calculate whether a incoming buffer overflow is possible:
 
         if ((startFragment + numFragments) > data->numFragments)
         
