@@ -27,15 +27,15 @@ A subsequent packet with a **numFragments** of 0 and a **startFragment** of 1 wi
 
 The calculated buffer index will be evaluated as `startFragment * 256 /* Maximum Fragment Size*/`, placing the position to write data, at `&buffer[256]`.
 
-To calculate the length of data to write, the caluculation : `numFragments - (256 - total_bytes % 256)` is utilized. In the condition of **numFragments** being set to 0, this will evaluate as `0 - ( 256 - (256 % 256))  == -256`. The function which writes to the buffer will cast the value to an unsigned 32bit integer, causing the statement to evaluate to 4294967039
+To calculate the length of data to write, the calculation : `numFragments - (256 - total_bytes % 256)` is utilized. In the condition of **numFragments** being set to 0, this will evaluate as `0 - ( 256 - (256 % 256))  == -256`. The function which writes to the buffer will cast the value to an unsigned 32bit integer, causing the statement to evaluate to 4294967039
 
-![Over write](overun.png)
+![Over write](media/overun.png)
 
 Upon reaching the statement to read data bytes to the buffer, the function invokation will evaluate to `buf.ReadBytes(&buffer[sizeof(buffer)], 4294967039)`, both overruning the reliable message buffer for writing, and overruning the fragment buffer for reading. This causing heap corruption and will cause the program to crash. 
 
 Packet Breakdown:
 
-![Packet Breakdown](media/PacketBreakDown)
+![Packet Breakdown](media/PacketBreakDown.png)
 
 ## PoC Video:
  [![Proof Of Concept video](https://img.youtube.com/vi/lHU_zk2xwbA/0.jpg)](https://www.youtube.com/watch?v=lHU_zk2xwbA)
