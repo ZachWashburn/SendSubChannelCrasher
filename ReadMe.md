@@ -4,7 +4,7 @@
 **Reported To Valve's HackerOne Program on October 29th 2021 under "#1386062, OOB Write due to Improper Checking of Buffer Bounds leads to Memory Corruption and Crash"**
 
 
-***Valve has not responded to the open bug report, as of 5/17/2023 the bug is still present in the most up to date version of the source engine.***
+***Valve responded to this bug on 05/23/2023 and quickly resolved the bug***
 
 ## Technical Background 
 The source engine builds a reliable message system on top of the standard UDP/steam-datagram networking sockets. "datafragements" are transmitted from the client to the server comprising a single reliable message, where the receiver proceeds to keep track of current messages, and ACK successful reception. Non-ACK'd messages are retransmitted by the client. 
